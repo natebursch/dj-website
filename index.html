@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Simple Wedding DJ</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Wedding DJ</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
 
 <style>
 * {
@@ -20,34 +20,57 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #0f0f0f;
-  color: #ffffff;
-  line-height: 1.6;
+  background: #0b0b0f;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Animated Gradient Background */
+body::before {
+  content: "";
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 20% 30%, #1f1f2e, transparent),
+              radial-gradient(circle at 80% 70%, #222244, transparent),
+              radial-gradient(circle at 50% 50%, #14141f, transparent);
+  animation: moveBg 20s linear infinite;
+  z-index: -1;
+}
+
+@keyframes moveBg {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(-10%, -10%); }
+  100% { transform: translate(0,0); }
 }
 
 nav {
   position: fixed;
   width: 100%;
-  top: 0;
-  background: rgba(0,0,0,0.85);
-  backdrop-filter: blur(10px);
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  backdrop-filter: blur(12px);
+  background: rgba(0,0,0,0.4);
   z-index: 1000;
 }
 
 nav a {
-  color: #ffffff;
+  color: white;
   text-decoration: none;
   margin-left: 25px;
   font-weight: 500;
-  transition: opacity 0.3s ease;
+  transition: 0.3s ease;
 }
 
 nav a:hover {
   opacity: 0.6;
+}
+
+section {
+  padding: 120px 20px;
+  max-width: 1100px;
+  margin: auto;
 }
 
 .hero {
@@ -56,28 +79,27 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0 20px;
-  background: linear-gradient(135deg, #111, #1c1c1c);
 }
 
 .hero h1 {
-  font-size: 3rem;
-  font-weight: 800;
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.2;
   max-width: 900px;
 }
 
-.hero-buttons {
-  margin-top: 30px;
+.hero span {
+  color: #7c8cff;
 }
 
 .button {
   display: inline-block;
-  padding: 14px 28px;
-  margin: 10px;
+  margin: 25px 10px 0;
+  padding: 15px 30px;
   border-radius: 50px;
-  text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s ease;
+  text-decoration: none;
+  transition: 0.3s ease;
 }
 
 .primary {
@@ -86,7 +108,7 @@ nav a:hover {
 }
 
 .primary:hover {
-  background: #ddd;
+  transform: translateY(-3px);
 }
 
 .secondary {
@@ -99,73 +121,77 @@ nav a:hover {
   color: black;
 }
 
-section {
-  padding: 120px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-section h2 {
-  font-size: 2.2rem;
-  margin-bottom: 40px;
+h2 {
+  font-size: 2.5rem;
   text-align: center;
+  margin-bottom: 60px;
 }
 
-.pricing-card {
-  background: #1a1a1a;
+.card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
   padding: 30px;
-  margin-bottom: 25px;
-  border-radius: 12px;
-  transition: transform 0.3s ease;
+  margin-bottom: 30px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: 0.3s ease;
 }
 
-.pricing-card:hover {
+.card:hover {
   transform: translateY(-5px);
+  border-color: #7c8cff;
 }
 
 .timeline-step {
-  margin-bottom: 25px;
-  padding: 20px;
-  border-left: 2px solid white;
-  background: #1a1a1a;
-  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   margin-bottom: 15px;
-  border: none;
-  border-radius: 6px;
-  background: #1a1a1a;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
   color: white;
 }
 
 .contact-form button {
-  padding: 14px 28px;
-  border: none;
+  padding: 15px 30px;
   border-radius: 50px;
-  background: white;
-  color: black;
+  border: none;
   font-weight: 600;
   cursor: pointer;
+  background: #7c8cff;
+  color: white;
   transition: 0.3s ease;
 }
 
 .contact-form button:hover {
-  background: #ddd;
+  transform: translateY(-3px);
+}
+
+.fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 footer {
   text-align: center;
-  padding: 40px 20px;
-  opacity: 0.5;
+  padding: 40px;
+  opacity: 0.4;
 }
 
-@media (max-width: 768px) {
+@media(max-width:768px){
   .hero h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 }
 </style>
@@ -187,94 +213,95 @@ footer {
   <div>
     <h1>
       We know weddings are complicated and expensive.<br>
-      We keep it simple and affordable.
+      <span>We keep it simple and affordable.</span>
     </h1>
-    <div class="hero-buttons">
-      <a href="#pricing" class="button primary">View Pricing</a>
-      <a href="#contact" class="button secondary">Contact</a>
-    </div>
+    <a href="#pricing" class="button primary">View Pricing</a>
+    <a href="#contact" class="button secondary">Contact</a>
   </div>
 </section>
 
-<section id="pricing">
+<section id="pricing" class="fade">
   <h2>Pricing</h2>
 
-  <div class="pricing-card">
+  <div class="card">
     <h3>Speaker Rentals — $250</h3>
-    <p>Professional sound system. Simple setup. Easy and affordable.</p>
+    <p>Professional sound system. Clean setup. Easy and affordable.</p>
   </div>
 
-  <div class="pricing-card">
+  <div class="card">
     <h3>Wedding DJ — $350</h3>
-    <p>EDM specialty. House, Dubstep, Trap, Melodic. Clean transitions. Smooth energy.</p>
+    <p>EDM specialty — House, Dubstep, Trap, Melodic. Smooth transitions. Modern energy.</p>
   </div>
 
-  <div class="pricing-card">
+  <div class="card">
     <h3>Live Piano Add-On — $300</h3>
-    <p>*We provide the piano and perform live.*</p>
-    <p><em>Negotiable depending on sheet music and number of songs played.</em></p>
+    <p>We provide the piano and perform live.</p>
+    <p><em>Negotiable depending on sheet music and number of songs.</em></p>
   </div>
 </section>
 
-<section id="about">
+<section id="about" class="fade">
   <h2>About</h2>
-  <p style="text-align:center; max-width:700px; margin:auto;">
-    Hi, I love music! We particularly run EDM music as our speciality — house,
-    dubstep, trap, melodic electronic.
-    <br><br>
-    We are getting married this year in 2025 and understand how stressful
-    all of these different vendors can be — so we make it simple.
-    <br><br>
-    Clear pricing. Easy communication. No confusion.
-    <br><br>
-    Let me know if we can make your day special.
-  </p>
+  <div class="card">
+    <p>
+      Hi, I love music. We specialize in EDM — house, dubstep, trap and melodic electronic.
+      <br><br>
+      We are getting married in 2025 and understand how stressful vendors can be.
+      That’s why we keep things simple.
+      <br><br>
+      Clear pricing. Easy communication. No confusion.
+      <br><br>
+      Let’s make your day unforgettable.
+    </p>
+  </div>
 </section>
 
-<section id="timeline">
+<section id="timeline" class="fade">
   <h2>What Happens Next</h2>
 
-  <div class="timeline-step">
-    <strong>1. Submit Date Request</strong><br>
-    Reach out and check availability.
-  </div>
+  <div class="card timeline-step"><strong>1.</strong> Submit date request.</div>
+  <div class="card timeline-step"><strong>2.</strong> Meeting to see if we're a good fit.</div>
+  <div class="card timeline-step"><strong>3.</strong> Final plan.</div>
+  <div class="card timeline-step"><strong>4.</strong> Playlist updates — must play, do not play, MC announcements.</div>
+  <div class="card timeline-step"><strong>5.</strong> The best night of your life. Seamless.</div>
 
-  <div class="timeline-step">
-    <strong>2. Set Up a Meeting</strong><br>
-    We go over details and see if we’re a good fit.
-  </div>
-
-  <div class="timeline-step">
-    <strong>3. Final Plan</strong><br>
-    Lock in your timeline and event flow.
-  </div>
-
-  <div class="timeline-step">
-    <strong>4. Playlist Updates</strong><br>
-    Unlimited changes. Must-play list. Do-not-play list.
-    MC announcements included.
-  </div>
-
-  <div class="timeline-step">
-    <strong>5. The Best Night of Your Life</strong><br>
-    Seamless. No questions asked. Just great energy.
-  </div>
 </section>
 
-<section id="contact">
+<section id="contact" class="fade">
   <h2>Contact</h2>
 
-  <form class="contact-form">
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea rows="5" placeholder="Wedding Date & Details"></textarea>
+  <!-- Replace YOUR_FORM_ID -->
+  <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Wedding Date & Details"></textarea>
     <button type="submit">Submit Date Request</button>
   </form>
 </section>
 
 <footer>
-  © 2025 Wedding DJ — Simple. Fun. Affordable.
+  © 2025 Wedding DJ — Simple. Modern. Affordable.
 </footer>
+
+<script>
+const faders = document.querySelectorAll('.fade');
+
+const appearOptions = {
+  threshold: 0.2
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('show');
+    observer.unobserve(entry.target);
+  });
+}, appearOptions);
+
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
+});
+</script>
 
 </body>
 </html>
