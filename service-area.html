@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Service Area | St Peter & Mankato MN Wedding DJ</title>
+<meta name="description" content="Wedding DJ based in St Peter MN serving Mankato, North Mankato, Nicollet County and surrounding southern Minnesota areas. Affordable, modern wedding DJ services.">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:#0b0b0f;color:white;overflow-x:hidden;}
+
+body::before{
+content:"";
+position:fixed;
+width:200%;height:200%;
+background:
+radial-gradient(circle at 15% 25%, #1a1a2e, transparent),
+radial-gradient(circle at 85% 75%, #1f2544, transparent),
+radial-gradient(circle at 50% 50%, #111827, transparent);
+animation:moveBg 25s linear infinite;
+z-index:-1;
+}
+@keyframes moveBg{
+0%{transform:translate(0,0);}
+50%{transform:translate(-8%,-8%);}
+100%{transform:translate(0,0);}
+}
+
+nav{
+position:fixed;
+top:0;width:100%;
+padding:20px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+backdrop-filter:blur(16px);
+background:rgba(10,10,20,0.6);
+z-index:1000;
+}
+
+.logo{
+font-weight:800;
+font-size:1.1rem;
+background:linear-gradient(90deg,#7c8cff,#9f7cff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+nav a{
+color:white;text-decoration:none;
+margin-left:30px;font-weight:500;
+position:relative;transition:0.3s;
+}
+
+nav a::after{
+content:"";position:absolute;left:0;bottom:-6px;
+width:0%;height:2px;background:#7c8cff;transition:0.3s;
+}
+nav a:hover::after{width:100%;}
+
+section{padding:140px 20px;max-width:1100px;margin:auto;}
+.hero{height:80vh;display:flex;align-items:center;justify-content:center;text-align:center;}
+
+.hero h1{font-size:3rem;font-weight:900;line-height:1.2;}
+
+.gradient-text{
+background:linear-gradient(90deg,#7c8cff,#9f7cff,#7c8cff);
+background-size:200%;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:gradientShift 6s ease infinite;
+}
+@keyframes gradientShift{
+0%{background-position:0%;}
+50%{background-position:100%;}
+100%{background-position:0%;}
+}
+
+.hero p{margin-top:25px;opacity:0.85;max-width:700px;margin:auto;}
+
+.card{
+background:rgba(255,255,255,0.04);
+backdrop-filter:blur(18px);
+padding:35px;margin-bottom:35px;
+border-radius:18px;
+border:1px solid rgba(255,255,255,0.08);
+transition:0.4s ease;
+}
+.card:hover{
+transform:translateY(-8px);
+border-color:#7c8cff;
+box-shadow:0 10px 40px rgba(0,0,0,0.4);
+}
+
+h2{text-align:center;font-size:2.4rem;margin-bottom:60px;}
+
+.button{
+display:inline-block;margin-top:30px;
+padding:15px 34px;border-radius:50px;
+font-weight:600;text-decoration:none;
+background:#7c8cff;color:white;
+box-shadow:0 0 20px rgba(124,140,255,0.4);
+transition:0.3s;
+}
+.button:hover{
+transform:translateY(-4px);
+box-shadow:0 0 30px rgba(124,140,255,0.6);
+}
+
+.fade{opacity:0;transform:translateY(40px);transition:1s;}
+.fade.show{opacity:1;transform:translateY(0);}
+
+footer{text-align:center;padding:50px;opacity:0.5;}
+
+@media(max-width:768px){
+.hero h1{font-size:2.1rem;}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo"><a href="index.html" style="text-decoration:none;color:inherit;">St Peter MN Wedding DJ</a></div>
+<div>
+<a href="index.html">Home</a>
+<a href="mankato-wedding-dj.html">Mankato DJ</a>
+<a href="service-area.html">Service Area</a>
+<a href="index.html#contact">Contact</a>
+</div>
+</nav>
+
+<section class="hero">
+<div>
+<h1>
+Wedding DJ Serving<br>
+<span class="gradient-text">Southern Minnesota</span>
+</h1>
+<p>
+Based in St Peter MN, we provide affordable wedding DJ services
+throughout the surrounding region with transparent pricing and modern music.
+</p>
+<a href="index.html#contact" class="button">Check Availability</a>
+</div>
+</section>
+
+<section class="fade">
+<h2>Primary Service Areas</h2>
+
+<div class="card">
+<p>
+<strong>St Peter, Minnesota</strong><br>
+Our home base. Travel within 30 miles is included in our standard pricing.
+</p>
+</div>
+
+<div class="card">
+<p>
+<strong>Mankato & North Mankato, Minnesota</strong><br>
+Full wedding reception and ceremony DJ coverage available.
+</p>
+</div>
+
+<div class="card">
+<p>
+<strong>Nicollet County & Le Sueur County</strong><br>
+We regularly serve venues throughout southern Minnesota.
+</p>
+</div>
+
+</section>
+
+<section class="fade">
+<h2>Travel Policy</h2>
+<div class="card">
+<p>
+Travel within 30 miles of St Peter MN is included.
+<br><br>
+For venues beyond 30 miles, we simply ask that reasonable
+travel expenses (gas and drive time) are covered.
+<br><br>
+No surprise fees. No inflated destination pricing.
+</p>
+</div>
+</section>
+
+<footer>
+© 2026 St Peter MN Wedding DJ
+</footer>
+
+<script>
+const faders=document.querySelectorAll('.fade');
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(!entry.isIntersecting)return;
+entry.target.classList.add('show');
+});
+},{threshold:0.2});
+faders.forEach(f=>observer.observe(f));
+</script>
+
+</body>
+</html>

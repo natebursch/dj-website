@@ -3,196 +3,192 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Modern Wedding DJ</title>
+
+<title>St Peter MN Wedding DJ | Affordable Wedding DJ Near Mankato MN</title>
+<meta name="description" content="Affordable wedding DJ in St Peter MN serving Mankato and surrounding Minnesota areas. Modern dance music, transparent pricing, and reliable service. 30 miles travel included.">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
+* {margin:0;padding:0;box-sizing:border-box;}
+html {scroll-behavior:smooth;}
 body {
-  font-family: 'Inter', sans-serif;
-  background: #0b0b0f;
-  color: white;
-  overflow-x: hidden;
+  font-family:'Inter',sans-serif;
+  background:#0b0b0f;
+  color:white;
+  overflow-x:hidden;
 }
 
-/* Animated Gradient Background */
+/* Enhanced Animated Background */
 body::before {
-  content: "";
-  position: fixed;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at 20% 30%, #1f1f2e, transparent),
-              radial-gradient(circle at 80% 70%, #222244, transparent),
-              radial-gradient(circle at 50% 50%, #14141f, transparent);
-  animation: moveBg 20s linear infinite;
-  z-index: -1;
+  content:"";
+  position:fixed;
+  width:200%;
+  height:200%;
+  background:
+    radial-gradient(circle at 15% 25%, #1a1a2e, transparent),
+    radial-gradient(circle at 85% 75%, #1f2544, transparent),
+    radial-gradient(circle at 50% 50%, #111827, transparent);
+  animation:moveBg 25s linear infinite;
+  z-index:-1;
 }
-
 @keyframes moveBg {
-  0% { transform: translate(0,0); }
-  50% { transform: translate(-10%, -10%); }
-  100% { transform: translate(0,0); }
+  0%{transform:translate(0,0);}
+  50%{transform:translate(-8%,-8%);}
+  100%{transform:translate(0,0);}
 }
 
+/* NAV */
 nav {
-  position: fixed;
-  width: 100%;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  backdrop-filter: blur(12px);
-  background: rgba(0,0,0,0.4);
-  z-index: 1000;
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:20px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  backdrop-filter:blur(16px);
+  background:rgba(10,10,20,0.6);
+  z-index:1000;
+}
+
+.logo {
+  font-weight:800;
+  font-size:1.1rem;
+  background:linear-gradient(90deg,#7c8cff,#9f7cff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 25px;
-  font-weight: 500;
-  transition: 0.3s ease;
+  color:white;
+  text-decoration:none;
+  margin-left:30px;
+  font-weight:500;
+  position:relative;
+  transition:0.3s;
 }
 
-nav a:hover {
-  opacity: 0.6;
+nav a::after {
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0%;
+  height:2px;
+  background:#7c8cff;
+  transition:0.3s;
 }
 
+nav a:hover::after {width:100%;}
+
+/* Sections */
 section {
-  padding: 120px 20px;
-  max-width: 1100px;
-  margin: auto;
+  padding:140px 20px;
+  max-width:1100px;
+  margin:auto;
 }
 
 .hero {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
 }
 
 .hero h1 {
-  font-size: 3.5rem;
-  font-weight: 900;
-  line-height: 1.2;
-  max-width: 900px;
+  font-size:3.4rem;
+  font-weight:900;
+  line-height:1.15;
 }
 
-.hero span {
-  color: #7c8cff;
+.gradient-text {
+  background:linear-gradient(90deg,#7c8cff,#9f7cff,#7c8cff);
+  background-size:200%;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:gradientShift 6s ease infinite;
 }
 
+@keyframes gradientShift {
+  0%{background-position:0%;}
+  50%{background-position:100%;}
+  100%{background-position:0%;}
+}
+
+.hero p {
+  margin-top:25px;
+  opacity:0.85;
+  max-width:650px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* Buttons */
 .button {
-  display: inline-block;
-  margin: 25px 10px 0;
-  padding: 15px 30px;
-  border-radius: 50px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s ease;
+  display:inline-block;
+  margin:30px 12px 0;
+  padding:15px 34px;
+  border-radius:50px;
+  font-weight:600;
+  text-decoration:none;
+  transition:0.3s ease;
 }
 
 .primary {
-  background: white;
-  color: black;
+  background:#7c8cff;
+  color:white;
+  box-shadow:0 0 20px rgba(124,140,255,0.4);
 }
-
 .primary:hover {
-  transform: translateY(-3px);
+  transform:translateY(-4px);
+  box-shadow:0 0 30px rgba(124,140,255,0.6);
 }
 
 .secondary {
-  border: 1px solid white;
-  color: white;
+  border:1px solid rgba(255,255,255,0.3);
+  color:white;
+}
+.secondary:hover {
+  background:white;
+  color:black;
 }
 
-.secondary:hover {
-  background: white;
-  color: black;
+/* Cards */
+.card {
+  background:rgba(255,255,255,0.04);
+  backdrop-filter:blur(18px);
+  padding:35px;
+  margin-bottom:35px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,0.08);
+  transition:0.4s ease;
+}
+.card:hover {
+  transform:translateY(-8px);
+  border-color:#7c8cff;
+  box-shadow:0 10px 40px rgba(0,0,0,0.4);
 }
 
 h2 {
-  font-size: 2.5rem;
-  text-align: center;
-  margin-bottom: 60px;
+  font-size:2.6rem;
+  text-align:center;
+  margin-bottom:60px;
 }
 
-.card {
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(20px);
-  padding: 30px;
-  margin-bottom: 30px;
-  border-radius: 16px;
-  border: 1px solid rgba(255,255,255,0.1);
-  transition: 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  border-color: #7c8cff;
-}
-
-.timeline-step {
-  margin-bottom: 20px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 14px;
-  margin-bottom: 15px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 10px;
-  color: white;
-}
-
-.contact-form button {
-  padding: 15px 30px;
-  border-radius: 50px;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-  background: #7c8cff;
-  color: white;
-  transition: 0.3s ease;
-}
-
-.contact-form button:hover {
-  transform: translateY(-3px);
-}
-
-.fade {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 1s ease;
-}
-
-.fade.show {
-  opacity: 1;
-  transform: translateY(0);
-}
+/* Fade */
+.fade {opacity:0;transform:translateY(40px);transition:all 1s ease;}
+.fade.show {opacity:1;transform:translateY(0);}
 
 footer {
-  text-align: center;
-  padding: 40px;
-  opacity: 0.4;
+  text-align:center;
+  padding:50px;
+  opacity:0.5;
 }
 
 @media(max-width:768px){
-  .hero h1 {
-    font-size: 2.2rem;
-  }
+  .hero h1 {font-size:2.3rem;}
 }
 </style>
 </head>
@@ -200,11 +196,11 @@ footer {
 <body>
 
 <nav>
-  <div><strong>Wedding DJ</strong></div>
+  <div class="logo"><a href="index.html" style="text-decoration:none;color:inherit;">St Peter MN Wedding DJ</a></div>
   <div>
-    <a href="#pricing">Pricing</a>
-    <a href="#about">About</a>
-    <a href="#timeline">Process</a>
+    <a href="index.html">Home</a>
+    <a href="mankato-wedding-dj.html">Mankato DJ</a>
+    <a href="service-area.html">Service Area</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
@@ -212,11 +208,14 @@ footer {
 <section class="hero">
   <div>
     <h1>
-      We know weddings are complicated and expensive.<br>
-      <span>We keep it simple and affordable.</span>
+      Affordable Wedding DJ in<br>
+      <span class="gradient-text">St Peter & Mankato MN</span>
     </h1>
+    <p>
+      Modern dance music. Transparent pricing. Serving southern Minnesota with reliable, honest service.
+    </p>
     <a href="#pricing" class="button primary">View Pricing</a>
-    <a href="#contact" class="button secondary">Contact</a>
+    <a href="#contact" class="button secondary">Check Availability</a>
   </div>
 </section>
 
@@ -224,83 +223,57 @@ footer {
   <h2>Pricing</h2>
 
   <div class="card">
-    <h3>Speaker Rentals — $250</h3>
-    <p>Professional sound system. Clean setup. Easy and affordable.</p>
+    <h3>Wedding DJ — $400</h3>
+    <p>4-hour reception coverage • Professional sound system • Live mixing • Custom playlist planning</p>
   </div>
 
   <div class="card">
-    <h3>Wedding DJ — $350</h3>
-    <p>EDM specialty — House, Dubstep, Trap, Melodic. Smooth transitions. Modern energy.</p>
+    <h3>Speaker Rental — $250</h3>
+    <p>Clean, professional speaker setup for smaller weddings or DIY events.</p>
   </div>
 
   <div class="card">
     <h3>Live Piano Add-On — $300</h3>
-    <p>We provide the piano and perform live.</p>
-    <p><em>Negotiable depending on sheet music and number of songs.</em></p>
+    <p>Live piano performance for ceremony or cocktail hour.</p>
   </div>
 </section>
 
-<section id="about" class="fade">
+<section class="fade">
   <h2>About</h2>
   <div class="card">
     <p>
-      Hi, I love music. We specialize in EDM — house, dubstep, trap and melodic electronic.
+      Based in St Peter MN, we are building our wedding DJ portfolio the honest way —
+      fair pricing, clear communication, and real effort.
       <br><br>
-      We are getting married in 2025 and understand how stressful vendors can be.
-      That’s why we keep things simple.
-      <br><br>
-      Clear pricing. Easy communication. No confusion.
-      <br><br>
-      Let’s make your day unforgettable.
+      We specialize in modern electronic and dance-friendly wedding music,
+      while accommodating your must-play and do-not-play requests.
     </p>
   </div>
 </section>
 
-<section id="timeline" class="fade">
-  <h2>What Happens Next</h2>
-
-  <div class="card timeline-step"><strong>1.</strong> Submit date request.</div>
-  <div class="card timeline-step"><strong>2.</strong> Meeting to see if we're a good fit.</div>
-  <div class="card timeline-step"><strong>3.</strong> Final plan.</div>
-  <div class="card timeline-step"><strong>4.</strong> Playlist updates — must play, do not play, MC announcements.</div>
-  <div class="card timeline-step"><strong>5.</strong> The best night of your life. Seamless.</div>
-
-</section>
-
 <section id="contact" class="fade">
-  <h2>Contact</h2>
-
-  <!-- Replace YOUR_FORM_ID -->
-  <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" rows="5" placeholder="Wedding Date & Details"></textarea>
-    <button type="submit">Submit Date Request</button>
-  </form>
+  <h2>Check Availability</h2>
+  <div class="card" style="text-align:center;">
+    <p>Travel within 30 miles is included. Beyond that, we simply ask that travel expenses are covered.</p>
+    <a href="https://forms.gle/L6fGZW47Vb3Z6arEA" target="_blank" class="button primary">
+      Open Availability Form
+    </a>
+  </div>
 </section>
 
 <footer>
-  © 2025 Wedding DJ — Simple. Modern. Affordable.
+© 2026 St Peter MN Wedding DJ
 </footer>
 
 <script>
-const faders = document.querySelectorAll('.fade');
-
-const appearOptions = {
-  threshold: 0.2
-};
-
-const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    entry.target.classList.add('show');
-    observer.unobserve(entry.target);
-  });
-}, appearOptions);
-
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
+const faders=document.querySelectorAll('.fade');
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(!entry.isIntersecting)return;
+entry.target.classList.add('show');
 });
+},{threshold:0.2});
+faders.forEach(f=>observer.observe(f));
 </script>
 
 </body>
